@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton Courts in Mumbai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://media1.tenor.com/images/ceadbd778b75353da2c12e6ba9e83edb/tenor.gif?itemid=12678753');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input[type="date"], button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #grounds-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        #grounds-list li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #grounds-list li img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        #grounds-list li h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        #grounds-list li p {
+            margin: 5px 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Badminton Courts in Mumbai</h1>
+        <h2>Select Date:</h2>
+        <input type="date" id="date" name="date">
+        <button onclick="searchCourts()">Search</button>
+
+        <h2>Available Courts</h2>
+        <ul id="courts-list">
+            <!-- Courts will be dynamically generated here -->
+        </ul>
+    </div>
+
+    <script>
+        function searchCourts() {
+            var selectedDate = document.getElementById("date").value;
+
+            var availableCourts = [
+                { name: "Court A: Shuttle Whizz", image: "https://media.hudle.in/venues/a0b37297-ac52-4f30-8537-94116fefe383/photo/48f6537eb74d5d1995198e55a5d9bee1fcd77905", price: 350, info: "Itis a well-maintained badminton court with professional lighting and spacious playing area." },
+                { name: "Court B: Mihir Sen", image: "https://media.hudle.in/venues/0b882c71-1a26-4789-9484-6cec047c8b12/photo/0a619ff46182dfb4bfeda0fbe76397f8c6964d22", price: 300, info: "It offers a comfortable playing environment with modern amenities and affordable rates." },
+                { name: "Court C: Shuttle Passion", image: "https://media.hudle.in/venues/427178bb-86d9-4ea4-891f-c5c85c05c653/photo/66d670e7372815fb330ce868dad1efee1b9b79ff", price: 580, info: "It is equipped with high-quality flooring and is suitable for both casual and competitive play." },
+            ];
+
+            // Clear previous results
+            var courtsList = document.getElementById("courts-list");
+            courtsList.innerHTML = "";
+
+            // Populate the list with available courts
+            availableCourts.forEach(function(court) {
+                var listItem = document.createElement("li");
+                var image = document.createElement("img");
+                image.src = court.image;
+                image.style.maxWidth = "180px"; 
+                var name = document.createElement("h3");
+                name.textContent = court.name;
+                var price = document.createElement("p");
+                price.textContent = "Price: Rs " + court.price;
+                var info = document.createElement("p");
+                info.textContent = court.info;
+                listItem.appendChild(image);
+                listItem.appendChild(name);
+                listItem.appendChild(price);
+                listItem.appendChild(info);
+                courtsList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - PlayVista</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">  
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="ui inverted blue fixed menu">
+            <div class="ui container">
+                <a href="#" class="header item">
+                    <img class="logo" src="https://www.logolynx.com/images/logolynx/e6/e6afeae3ba472ac487d28a1f641c7434.jpeg" alt="PlayVista Logo">
+                    PlayVista
+                </a>
+                <div class="right menu">
+                    <a href="index.html" class="item">HOME</a>
+                    <a href="contact.html" class="active item">CONTACT</a>
+                    <a href="login.html" class="item">LOG IN</a>
+                </div>
+            </div>
+        </nav>
+        <div class="ui main text container">
+            <h1 class="ui inverted header">
+                Contact Us
+            </h1>
+            <h2 class="ui inverted blue header">Contact us by sending your name and email and we'll get back to you, or call/email us using the info below.</h2>
+        </div>
+    </header>
+    
+    <main class="whitebk">
+        <div class="ui middle aligned stackable grid container">
+            <div class="row">
+                <div class="eight wide column">
+                    <h3 class="ui header">You should contact PlayVista if you want to:</h3><b></b>
+                    <div class="ui bulleted list">
+                        <div class="item">Gain access to the platform and its benefits</div>
+                        <div class="item">Book sports facilities</div>
+                        <div class="item">Ask any questions</div>
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <form action="index.html" method="get" id="contact-form" class="ui form">
+                        <div class="inline field">
+                            <label for="contactname" class="three wide field">Name</label>
+                            <input type="text" name="contact-name" id="contactname" placeholder="Name" class="eight wide field" autofocus required pattern="[A-Za-z\s]{2,}">
+                        </div>
+                        <div class="inline field">
+                            <label for="email" class="ui three wide field">Email</label>
+                            <input type="email" name="email" id="email" placeholder="example@example.com" class="ui eight wide field" required>
+                        </div>
+                        <div class="inline field">
+                            <label for="details" class="ui three wide field">Question</label>
+                            <textarea name="details" id="details" placeholder="Write anything.." cols="30" rows="7" class="ui eight wide field"></textarea>
+                        </div>
+                        <div class="grouped field">
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="agree" id="yes" value="yes" required>
+                                    <label for="yes">I agree to the Terms and Conditions of PlayVista.</label>
+                                </div>
+                            </div>
+                            <button class="ui button" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="sixteen wide column">
+                    <h3 class="ui header">Get in touch with PlayVista</h3>
+                    <div class="item">
+                        <i class="map marker alternate icon"></i>18 Main Street,<br>
+                        Mumbai,<br>
+                        India,<br>
+                        400001
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="sixteen wide column">
+                    <div class="ui divider"></div>
+                    <div class="item">
+                        <i class="phone icon"></i>+91 923 456 7890<br> 
+                        <i class="globe icon"></i>info@playvista.com
+                    </div>
+                    <div class="ui divider"></div>
+                    <div class="item">
+                        <i class="clock icon"></i>Mon - Fri<br>
+                        9.00 AM - 5.00 PM<br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="ui inverted vertical footer segment">
+            <div class="ui container">
+                <div class="ui stackable inverted divided equal height stackable grid">
+                    <div class="three wide column">
+                        <div class="ui inverted link list">
+                            &copy; 2024 PlayVista. All rights reserved 
+                        </div>
+                    </div>
+                    <div class="three wide column">
+                        <h4 class="ui inverted header">Newsletters</h4>
+                        <div class="ui inverted link list">
+                            Sign up for PlayVista's regular newsletters for updates and opportunities.
+                            <a class="ui inverted button" href="contact.html">Sign Up</a>
+                        </div>
+                    </div>
+                    <div class="seven wide column">
+                        <h4 class="ui inverted header">Get In Touch</h4>
+                        <p><i class="instagram icon"></i>playvistaa<br>
+                        <i class="twitter icon"></i>PlayVista</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+    <script>
+        $('.ui.checkbox').checkbox();
+    </script>
+</body>
+</html>
+

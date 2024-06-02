@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HOMEPAGE</title>
+        <style>
+            body {
+                background-color: hsla(235, 73%, 9%, 0.863);
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: rgb(207, 214, 241);
+                text-align: center;
+                text-shadow: 0ch;
+                margin: 0%;
+                padding: 0%;
+            }
+
+            h1 {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-align: center;
+                font-style: normal;
+                font-size: xx-large;
+                text-shadow: 0ch;
+            }
+            
+            
+            aside {
+                width: 10%;
+                padding-left: 0%;
+                float: right;
+                box-sizing: border-box;
+                size: 0cap;
+                margin-right: 250px;
+                margin-top: 1.5%;
+                -ms-flex-align: center;
+                height: 70%;
+            }
+            
+            h3{
+                font-size: 1.5em; 
+                color: #000000; 
+            }
+
+            a {
+                color: #1f76db; 
+                text-decoration: none;
+            }
+            h2 {
+                font-size: larger;
+            }
+            h4{
+                color: #000000;
+                font-size: larger;
+            }
+            
+            a:hover {
+                text-decoration: underline;
+            }
+            article {
+                text-align: left;
+                margin: 15px;
+                padding: 15px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 9px;
+                color: rgb(16, 20, 19);
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: larger;
+            }
+            .search-box {
+                text-align: center;
+                font-size: larger;
+                margin: 20px;
+                padding: 20px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 10px;
+            }
+
+            select {
+                margin: 10px;
+                padding: 5px;
+            }
+            label {
+                color: black;
+                font-weight: 200;
+                font-size: larger;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            footer {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: rgb(7, 10, 19);
+                padding: 10px;
+                font-size: larger;
+            }
+
+            .social-icons {
+                display: flex;
+                gap: 10px;
+            }
+
+            .social-icons a {
+                text-decoration: none;
+                color: rgb(16, 20, 19);
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>PlayVista - Find and Book Sports Facilities</h1>
+        <h2>A comprehensive online platform designed to address the challenges faced by
+            sports enthusiasts in finding and booking suitable spaces for different sports.<br> The
+            platform streamlines the process of discovering, booking, and paying for sports facilities,
+            eliminating the need for manual inquiries and providing a hassle-free experience.</h2>
+                <div class="containerr">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="login.html">LOG IN</a></li><br>
+                    </ul>
+                    <br>
+                </nav>
+            </div>
+        
+        <aside>
+            <img src="https://media.tenor.co/images/a7897a10bbe4929b528d5c15bd7df7f3/rawf" width="380" height="320">
+        </aside>
+        
+        <article>
+            <h3>Welcome to PlayVista</h3>
+            <p>Explore the world of sports with PlayVista - your go-to platform for discovering and booking sports facilities. Whether you're a solo player looking for a quick game or a team organizing regular matches, we've got you covered.
+                PlayVista goes beyond just finding sports facilities; it's a community-driven platform where sports enthusiasts can connect, form teams, and share their passion for recreation. Join us in building a network that fosters teamwork, competition, and a love for the game.
+            </p>
+            <p>Connect with fellow sports enthusiasts, form teams, and embark on exciting adventures on the field. Our platform not only simplifies the process of finding the perfect playground but also provides a space for you to build connections and create unforgettable sporting memories.</p>
+            <p>Ready to elevate your sports experience? Join PlayVista today!</p>
+            <p><a href="index.html">Connect and Form Teams</a></p>
+        </article>
+        <div class="search-box">
+            <h4>Find Sports Facilities Near You</h4>
+            <img src="https://i.pinimg.com/originals/12/69/21/126921f21b3ab5fa24849f84b4b94d7d.jpg" alt="Sports Facilities Image" width="1400" ; height="1090" ; display="inline-block">
+            <br><br>
+            <label for="locality">Select Locality:</label><br>
+            <iframe
+            width="600"
+            height="450"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+            src="https://www.google.com/maps/d/u/0/embed?mid=1QdUiFNGmF3zr_84PrAJFTcpQaAw&ll=18.930320128560858%2C72.83583616882323&z=14"><br>
+        </iframe>
+            <br>
+            <label for="sports">Select Sports Type:</label><br>
+            <select id="sports" name="sports" onchange="la(this.value)">
+                <option disabled selected>Sports</option>
+                <option value="football.html">Football</option>
+                <option value="basketball.html">Basketball</option>
+                <option value="badminton.html">Badminton</option>
+                <option value="volleyball.html">Volleyball</option>
+            </select>
+            
+            <script>
+                function la(src) {
+                    window.location = src;
+                }
+            </script>
+            
+            <button type="button">Search</button>
+            <p><a href="/FIND-FACILITIES/">Find Facilities</a></p>
+        </div>
+        <footer>
+            <p>&copy; 2024 PlayVista. All rights reserved.</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volleyball Grounds in Mumbai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://giffiles.alphacoders.com/142/142677.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-clip: content-box;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input[type="date"], button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #grounds-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        #grounds-list li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #grounds-list li img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        #grounds-list li h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        #grounds-list li p {
+            margin: 5px 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Volleyball Grounds in Mumbai</h1>
+        <h2>Select Date:</h2>
+        <input type="date" id="date" name="date">
+        <button onclick="searchGrounds()">Search</button>
+
+        <h2>Available Grounds</h2>
+        <ul id="grounds-list">
+        </ul>
+    </div>
+
+    <script>
+        function searchGrounds() {
+            var selectedDate = document.getElementById("date").value;
+
+            var availableGrounds = [
+                { name: "Ground 1: Navi Mumbai Sports Assoc.", image: "https://imgmediagumlet.lbb.in/media/2019/08/5d4d560984588c467d30a31e_1565349385363.jpg?fm=webp&w=750&h=500&dpr=1", price: 200, info: "It is a spacious volleyball court located in Mumbai. It has excellent facilities and well-maintained courts." },
+                { name: "Ground 2: IIT bombay", image: "https://i.ytimg.com/vi/wcsY10tnpsk/maxresdefault.jpg", price: 250, info: "It is a popular volleyball court known for its quality playing surfaces and friendly atmosphere." },
+                { name: "Ground 3", image: "https://static.wixstatic.com/media/e83ceb_ff02a0b7c52f44d8ae153337e7837fe6~mv2.jpeg/v1/fill/w_976,h_732,al_c,q_85,enc_auto/e83ceb_ff02a0b7c52f44d8ae153337e7837fe6~mv2.jpeg", price: 300, info: "It offers state-of-the-art volleyball facilities with modern amenities for players and spectators." },
+                // Add more grounds here
+            ];
+
+            // Clear previous results
+            var groundsList = document.getElementById("grounds-list");
+            groundsList.innerHTML = "";
+
+            // Populate the list with available grounds
+            availableGrounds.forEach(function(ground) {
+                var listItem = document.createElement("li");
+                var image = document.createElement("img");
+                image.src = ground.image;
+                image.style.maxWidth = "180px"; 
+                var name = document.createElement("h3");
+                name.textContent = ground.name;
+                var price = document.createElement("p");
+                price.textContent = "Price: Rs " + ground.price;
+                var info = document.createElement("p");
+                info.textContent = ground.info;
+                listItem.appendChild(image);
+                listItem.appendChild(name);
+                listItem.appendChild(price);
+                listItem.appendChild(info);
+                groundsList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>
+

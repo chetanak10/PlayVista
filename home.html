@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayVista</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="containerr=">
+            <h1>PlayVista - Find and Book Sports Facilities</h1><br>
+            <nav>
+                <ul>
+                    <li><a href="playvista.html">EXPLORE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="login.html">LOG IN</a></li><br>
+                </ul>
+                <br>
+            </nav>
+        </div>
+    </header>
+    <section id="home">
+        <div class="container">
+            <div class="container-img">
+            <img src="http://media.giphy.com/media/QK7P8ER6Ovmx2/giphy.gif" alt="Sports Image">
+            <img src="https://media.giphy.com/media/USsQwPRD6kBOM1hI1O/giphy.gif" alt="Sports Image">
+        </div>
+            <h2>Upcoming Events/Challenges</h2>
+            <ul>
+                <li>
+                    <img src="https://www.factinate.com/wp-content/uploads/2017/08/GettyImages-1015395376.jpg" alt="skateboarding">
+                    <p>SKATEBOARDING: DECATH AT THANE</p><b></b>
+                </li>
+                <li>
+                    <img src="https://media.allforsport.in/community_challenges/99fccab3-6f5a-4651-87eb-1b46c7d19aca.jpg" alt="cycling">
+                    <p>CYCLING: THE CENTURION 50 DAY CHALLENGE</p><b></b>
+                </li>
+                <li>
+                    <img src="https://media.allforsport.in/events/4f56d908-ee71-11ee-8064-0709a65bd290/1711875309261.jpeg" alt="running">
+                    <p>RUNNING: THE CENTURION 50 DAY CHALLENGE</p><b></b><br><br>
+                </li>
+            </ul>
+            <h2>Team Formation</h2>
+            <p>Find teammates for team sports by posting your interest on PlayVista.<br>
+            Connect with nearby players interested in the same sport and form a team!</p>
+            <form id="team-formation-form">
+             <h2>Team Formation</h2>
+             <label for="name">Name:</label>
+             <input type="text" id="name" name="name" required>
+             <label for="email">Email:</label>
+             <input type="email" id="email" name="email" required>
+             <label for="sport">Sport:</label>
+             <input type="text" id="sport" name="sport" required><br>
+             <input type="submit" value="Submit">
+            </form><br><br>
+
+            <h2>User Reviews and Ratings</h2>
+            <p>Share your experiences and rate facilities to help others make informed decisions about where to play.</p>
+            <form id="review-form">
+             <label for="rating">Rating:</label>
+             <input type="number" id="rating" name="rating" min="1" max="5" required>
+             <label for="review">Review:</label>
+             <textarea id="review" name="review" required></textarea><br>
+             <input type="submit" value="Submit"><br>
+             </form>
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 PlayVista. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

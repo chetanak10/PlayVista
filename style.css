@@ -1,0 +1,248 @@
+
+header {
+    background-color: #012d5a
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: xx-large;
+    color: #032447;
+}
+ui.main.container {
+    margin-top: 7em;
+    margin-bottom:  4em;
+  }
+.ui.inverted.button{
+    margin-top: 0.7em;
+    margin-left: 3.2em;
+}
+.ui.inverted.vertical.footer.segment {
+   background-color:#060606;
+}
+
+.whitebk {
+    background-image: url("https://github.com/AlexKav47/Sports-Website/blob/main/Sports%20Website/images/whitebk.jpg?raw=true")
+    padding: 50px 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #5885bc, #173680);;
+    color: #faf8f8;
+}
+
+a {
+    color: #032447;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #052d58;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+}
+
+nav ul li {
+    display: inline; 
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #050404;
+    text-decoration: none; /* Remove underline from links */
+    padding: 8px 12px; /* Add padding to create buttons */
+    border-radius: 4px; /* Add rounded corners */
+    background-color: #eae4e4; /* Set background color */
+    transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Change background color on hover */
+}
+
+
+nav {
+    text-align: center;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Home page styles */
+#home {
+    padding: 20px;
+}
+
+#home img {
+    width: 100%; /* Use 100% width to make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block; /* Align images horizontally */
+    margin-right: 20px; /* Add some spacing between images */
+    margin-bottom: 20px; /* Add some spacing between rows */
+}
+
+
+#home ul {
+    padding: 0;
+}
+
+#home ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+#home ul li img {
+    width: 350px;
+    height: 350px
+    margin-right: 10px;
+    justify-content: flex-start;
+}
+
+/* All Sports page styles */
+#all-sports {
+    padding: 20px;
+}
+
+#all-sports select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#grounds-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+/* Inside styles.css */
+
+/* Form styling */
+form {
+    margin-bottom: 20px;
+}
+
+form h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="review"],
+form textarea {
+    width: 35%;
+    height: 15%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="number"] {
+    width: 50px;
+}
+
+form input[type="submit"] {
+    background-color: #a2dffb;
+    color: #1b0202;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Overall layout styling */
+.container {
+    max-width: 1360px;
+    width: 110%; /* Each image takes up 50% of the container width */
+    height: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+}
+
+.containerr {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+.container-img {
+    width: 110%; /* Each image takes up 50% of the container width */
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+section {
+    padding: 20px 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px;
+    position: fixed;
+    bottom: 10;
+    width: 100%;
+    height: 3%;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="number"],
+    form textarea {
+        width: calc(90% - 20px);
+    }
+}
+

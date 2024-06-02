@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Courts in Mumbai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://media.giphy.com/media/3o85xLF5Nrw41xu1Nu/giphy.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input[type="date"], button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #grounds-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        #grounds-list li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #grounds-list li img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        #grounds-list li h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        #grounds-list li p {
+            margin: 5px 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Basketball Courts in Mumbai</h1>
+        <h2>Select Date:</h2>
+        <input type="date" id="date" name="date">
+        <button onclick="searchCourts()">Search</button>
+
+        <h2>Available Courts</h2>
+        <ul id="courts-list">
+            <!-- Courts will be dynamically generated here -->
+        </ul>
+    </div>
+
+    <script>
+        function searchCourts() {
+            var selectedDate = document.getElementById("date").value;
+
+            var availableCourts = [
+                { name: "Court 1: AstroPark", image: "https://media.hudle.in/venues/1a958c53-8e33-4eae-ac93-0c44bbbd3bf4/photo/da29a6bab3df0f6bec91e981f60da2e5ae7192f7", price: 450, info: "It is a well-equipped basketball court located in Mumbai. It has standard dimensions and is suitable for both amateur and professional players." },
+                { name: "Court 2: Balkan Ji Bari", image: "https://media.hudle.in/venues/7e8c4a25-72c5-4cf7-bf50-f92b122c2bd9/photo/52032d97f8363c98d46edd436e68c27a923b06b1", price: 500, info: "It is a popular basketball court known for its smooth surface and excellent lighting facilities." },
+                { name: "Court 3: Maniac Basketball Academy", image: "https://media.hudle.in/venues/ed7b5e4c-816d-4d4b-9ce2-867f7e3dffe8/photo/cb28de7a1681ed782dfbbf69ffef94933bc8bcad", price: 300, info: "It offers a vibrant basketball community with regular matches and tournaments organized throughout the year." },
+            ];
+
+            // Clear previous results
+            var courtsList = document.getElementById("courts-list");
+            courtsList.innerHTML = "";
+
+            // Populate the list with available courts
+            availableCourts.forEach(function(court) {
+                var listItem = document.createElement("li");
+                var image = document.createElement("img");
+                image.src = court.image;
+                image.style.maxWidth = "180px"; 
+                var name = document.createElement("h3");
+                name.textContent = court.name;
+                var price = document.createElement("p");
+                price.textContent = "Price: Rs " + court.price;
+                var info = document.createElement("p");
+                info.textContent = court.info;
+                listItem.appendChild(image);
+                listItem.appendChild(name);
+                listItem.appendChild(price);
+                listItem.appendChild(info);
+                courtsList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>
